@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body,#root{
+    width: 100%;
+    background-color: black;
+}
+main{
+    position: relative;
+}
+section{
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+section .nav-elem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    height: 180px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+#section-1 {
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        white-space: nowrap;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        .nav-elem:nth-child(2){
+            i{
+                color: red;
+            }
+        }
+    }
+    .middle{
+        .title{
+            margin-left: 600px;
+            font-size: 100px;
+            gap: 5px;
+            color: white;
+        }
+    }
+    .bottom{
+        .p1{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-block: 5rem;
+            color: white;
+            margin-left: 400px;
+            font-size: 1.5rem;
+        }
+        .p2{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: rgb(94, 133, 185);
+            margin-left: 430px;
+            margin-top: -50px;
+        }
+        .p3{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: white;
+            margin-left: 430px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+    }
+
+}
+#section-2{
+    .titles{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-top: 20rem;
+
+        .title{
+            display: flex;
+            gap: 4rem;
+            opacity: 0.3;
+            padding-block: 2rem;
+            margin-left: 3.5rem;
+            cursor: pointer;
+            transition: all 0.3s linear;
+            h1{
+                font-size: 4.5rem;
+                font-weight: 100;
+                line-height: 1;
+            }
+            small{
+                margin-top: 0.6rem;
+                font-size: 0.5rem;
+            }
+
+        }
+
+    }
+    .title:hover{
+        opacity: 1;
+    }
+}
+
+#canvas-elem::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("/public/background-l.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s linear;
+}
+
+main:has(#section-2 .title:hover) #canvas-elem::after{
+    opacity: 0;
+}
+.images{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: all 0.3s linear;
+    }
+}
+main:has(#section-2 .title[img-title="tommorow-land"]:hover) .images #tommorow-land{
+    opacity: 1;
+    background-color: rgb(4 , 7 , 24);
+}
+main:has(#section-2 .title[img-title="Navy"]:hover) .images #Navy{
+    opacity: 1;
+    background-color: rgb(4 , 7 , 24);
+}
+main:has(#section-2 .title[img-title="chichago"]:hover) .images #chichago{
+    opacity: 1;
+    background-color: rgb(4 , 7 , 24);
+}
+main:has(#section-2 .title[img-title="Lousis"]:hover) .images #Lousis{
+    opacity: 1;
+    background-color: rgb(4 , 7 , 24);
+}
+main:has(#section-2 .title[img-title="KIKK"]:hover) .images #KIKK{
+    opacity: 1;
+    background-color: rgb(4 , 7 , 24);
+}
+main:has(#section-2 .title[img-title="kennedy"]:hover) .images #kennedy{
+    opacity: 1;
+    background-color: rgb(4 , 7 , 24);
+}
+main:has(#section-2 .title[img-title="opera"]:hover) .images #opera{
+    opacity: 1;
+    background-color: rgb(4 , 7 , 24);
+}
+
+#section-3{
+    padding-top: 10rem;
+    padding-inline: 10rem;
+    position: relative;
+    z-index: 0;
+    isolation: isolate;
+    color: white;
+    min-height: initial;
+    .top,.left{
+        display: flex;
+        margin-left: 3rem;
+        margin-top: 2.2rem;
+        font-size: 2.5rem;
+    }
+    .bottom,.right{
+        display: flex;
+        gap: 4rem;
+        margin-left: 15rem;
+        margin-top: 4rem;
+        color: rgb(94, 133, 185);
+    }
+}
+#section-4{
+    padding-inline: 10rem;
+    min-height: 50vh;
+    .top,.left{
+        display: flex;
+        margin-left: 3rem;
+        margin-top: 2.2rem;
+        font-size: 2.5rem;
+    }
+    .bottom,.right{
+        display: flex;
+        gap: 4rem;
+        margin-left: 15rem;
+        margin-top: 4rem;
+        color: rgb(94, 133, 185);
+    }
+}
