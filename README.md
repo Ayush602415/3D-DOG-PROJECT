@@ -1,16 +1,39 @@
-# React + Vite
+# 🐕 Interactive 3D Dog Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An interactive 3D web experience built using **React, Three.js, React Three Fiber, and GSAP**. The project combines 3D model animation, custom shader effects, scroll-based movement, and interactive material transitions.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **3D Model Rendering:** Loads a 3D dog model using GLTF.
+- **Model Animations:** Plays built-in animations using Drei's `useAnimations` hook.
+- **Custom Materials:** Uses Matcap textures to create different visual appearances.
+- **Shader Programming:** Customizes the fragment shader to blend between two Matcap textures.
+- **Scroll-Based Animation:** Animates the model's position and rotation using GSAP ScrollTrigger.
+- **Hover Interactions:** Changes the model's material when hovering over different titles.
+- **Smooth Transitions:** Uses GSAP to animate shader uniforms for gradual material transitions.
+- **Responsive 3D Scene:** Renders the model inside a React Three Fiber canvas.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- Three.js
+- React Three Fiber
+- React Three Drei
+- GSAP
+- GSAP ScrollTrigger
+- GLSL Shader Programming
 
-## Expanding the Oxlint configuration
+## 📂 Project Assets
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+The project uses the following types of assets:
+
+- `dog.drc.glb` — 3D dog model and its embedded animations.
+- `dog_normals.jpg` — Normal map for the dog model.
+- `branches_diffuse.jpeg` — Branch diffuse texture.
+- `branches_normals.jpeg` — Branch normal map.
+- `mat-cap/` — Collection of Matcap textures used for material transitions.
+
+**Note:** Place the assets in the appropriate folders inside the `public` directory so that the application can load them using absolute paths.
+
+## 🚀
