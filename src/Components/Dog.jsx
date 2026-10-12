@@ -7,9 +7,8 @@ import gsap from 'gsap'
 import {useGSAP} from "@gsap/react"
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
 
-
 function Dog() {
-  gsap.registerPlugin(useGSAP())
+  gsap.registerPlugin(useGSAP)
   gsap.registerPlugin(ScrollTrigger)
 
     const model = useGLTF("/models/dog.drc.glb")
@@ -234,3 +233,4 @@ function Dog() {
 
 
 export default Dog
+
